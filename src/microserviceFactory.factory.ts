@@ -371,6 +371,12 @@ import {
   
     //   return MicroserviceFactory._kafkaMessageBrokerClient;
     // }
+
+    // static async useWebSocketAdapter() {
+      // const userRepository = MicroserviceFactory._app.get<Repository<UserEntity>>(UserRepository);
+    //   const adapter = new WebsocketAdapter(MicroserviceFactory._app);
+    //   MicroserviceFactory._app.useWebSocketAdapter(adapter);
+    // }
   
     static async addMicroservices() {
       const messagingBrokerOption = MicroserviceFactory._envVariables.MESSAGING_BROKER_OPTION;

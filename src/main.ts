@@ -14,6 +14,7 @@ async function bootstrap() {
   await MicroserviceFactory.enableCors();
   await MicroserviceFactory.addGlobalFilters(new AllExceptionsFilter(MicroserviceFactory.get(LoggerService)));
   await MicroserviceFactory.addGlobalInterceptors(new ResponseTransformInterceptor());
+  // await MicroserviceFactory.useWebSocketAdapter();
   await MicroserviceFactory.addSwagger();
   await MicroserviceFactory.listen();
 }
