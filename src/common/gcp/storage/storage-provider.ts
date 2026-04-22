@@ -101,7 +101,7 @@ export class StorageProvider {
       return null;
     }
     const buffer = await this.getFile(filePath);
-    return new Blob([buffer]);
+    return new Blob([new Uint8Array(buffer)]);
   }
 
   public async generateFileUrl(folderName: string, fileName: string): Promise<string | null> {

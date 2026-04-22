@@ -198,7 +198,7 @@ export class FindUsersResponse {
 }
 
 export class GetRoleRequest extends BaseRequest {
-  @ApiProperty({ enum: UserRoles, type: UserRoles, description: ' Role type' })
+  @ApiProperty({ enum: UserRoles, enumName: 'UserRoles', description: ' Role type' })
   // @IsString({message:"Role type must be a string"})
   @IsEnum(UserRoles)
   @IsNotEmpty({ message: 'Role type must not be empty' })
@@ -248,7 +248,7 @@ export class UpdateUserRequest extends BaseRequest {
   profilePicture: string;
 }
 export class UpdateRoleRequest extends BaseRequest {
-  @ApiProperty({ enum: UserRoles, type: UserRoles, description: 'User Role' })
+  @ApiProperty({ enum: UserRoles, enumName: 'UserRoles', description: 'User Role' })
   // @IsString({message:"Role type must be a string"})
   @IsEnum(UserRoles)
   @IsNotEmpty({ message: 'Role  must not be empty' })
